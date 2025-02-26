@@ -10,15 +10,16 @@
 } from "../lists.js";
 
 import { question } from "readline-sync";
+import { GetType, Type } from "../Mobile/Mobile.js";
 
 export const languages = [];
-export const Type = [];
+// export const Type = [];
 
-Type.push("Web");
-Type.push("Mobile");
-Type.push("System");
-Type.push("AI");
-Type.push("ML");
+// Type.push("Web");
+// Type.push("Mobile");
+// Type.push("System");
+// Type.push("AI");
+// Type.push("ML");
 
 const includes = question("Enter Type of Coding: ");
 
@@ -58,7 +59,7 @@ if (includes.includes("Web")) {
 if (includes.includes("Mobile")) {
   const mobileFrontend = question("Enter Mobile Frontend Framework: ");
   frontendMobileFramework(mobileFrontend);
-
   const backendLibrary = question("Enter Backend Library: ");
-  backendMobileFramework(backendLibrary);
+  const getNewType = new GetType();
+  getNewType.getIO(backendLibrary);
 }
